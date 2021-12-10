@@ -1,0 +1,15 @@
+{
+  "name": "Halftones-in-Space",
+  "version": "1.0.0",
+  "dependencies": {
+    "@spectrum-web-components/bundle": "^0.23.0",
+    "lit": "^2.0.2",
+    "halftone-web-component": "https://github.com/Web-Components-in-Space/halftone-web-component.git"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.28"
+  },
+  "scripts": {
+    "serve": "./node_modules/.bin/web-dev-server --node-resolve --open=./index.html --watch"
+  }
+}
