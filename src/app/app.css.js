@@ -4,7 +4,7 @@ export const style = css`
     :host {
         height: 100%;
         width: 100vw;
-        background-color: white;
+        background-color: red;
     }
   
     sp-theme {

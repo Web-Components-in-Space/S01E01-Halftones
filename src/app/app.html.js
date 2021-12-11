@@ -3,28 +3,18 @@ import '@spectrum-web-components/theme/sp-theme';
 import '@spectrum-web-components/theme/theme-light';
 import '@spectrum-web-components/theme/scale-medium';
 import 'halftone-web-component';
-import '../sidepanel';
-import '../floatingheader';
-import '../floatingfooter';
 
 export const template = function(scope) { return html`
 
 <sp-theme scale="medium" color="light">
-    <ht-sidepanel 
-        shapeType=${scope.shapeType}
-        ?inverse=${scope.invert}
-        halftoneColor=${scope.halftoneColor}
-        backgroundColor=${scope.backgroundColor}
-        spread=${scope.spread}>
-    </ht-sidepanel>
+    <ht-sidepanel></ht-sidepanel>
     <div id="main-container">
-        <ht-floatingheader image=${scope.image}></ht-floatingheader>
+        <ht-floatingheader></ht-floatingheader>
         <halftone-svg 
-            src=${scope.image} 
-            ?inverse=${scope.invert}
-            distance=${scope.spread}
-            shapecolor=${scope.halftoneColor}
-            shapetype=${scope.shapeType}>
+            src="./assets/astronaut.jpg"
+            distance="14"
+            shapecolor="red"
+            shapetype="circles">
             <div id="background" style="background-color: ${scope.backgroundColor}"></div>
         </halftone-svg>
         <ht-floatingfooter></ht-floatingfooter>
