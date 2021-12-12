@@ -1,5 +1,16 @@
 # S01E01-Halftones
 
+# Step 2: Organizing and our first child component
+In this second step, we're going to do some custom organization of our main app component,
+but also build out our first child component that allows us to select an image to use for our halftone
+
+Step 2 covers:
+
+- Separating out our HTML/CSS into different files
+- Creating the "floatingheader" component
+- Mapping an array of image URLs to thumbnails
+- Adding our first Spectrum Web Component with icon
+
 # Step 1: Setup
 Since this is the first episode and the first time we're setting up a lit application,
 lets focus on the first steps of laying out our application.
