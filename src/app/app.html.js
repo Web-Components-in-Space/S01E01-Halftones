@@ -18,7 +18,9 @@ export const template = function(scope) { return html`
         spread=${scope.spread}>
     </ht-sidepanel>
     <div id="main-container">
-        <ht-floatingheader image=${scope.image}></ht-floatingheader>
+        <ht-floatingheader image=${scope.image} @uploadImage=${() => {
+            scope.shadowRoot.getElementById('file-input').click();
+        }}></ht-floatingheader>
         <halftone-svg 
             src=${scope.image} 
             ?inverse=${scope.invert}
@@ -30,4 +32,5 @@ export const template = function(scope) { return html`
         <ht-floatingfooter></ht-floatingfooter>
     </div>
 </sp-theme>
+<input type="file" id="file-input" style="display: none" @change=${(e) => scope.onLocalImage(e) } accept="image/*" />
 `};

@@ -2,10 +2,13 @@ import {html} from 'lit';
 import '@spectrum-web-components/button/sp-button';
 import '@spectrum-web-components/icon/sp-icon';
 import { AddIcon } from '@spectrum-web-components/icons-workflow';
+import {UPLOAD_IMAGE} from './index.js';
 
 export const template = function(scope) {
     return html`
-        <sp-button><sp-icon slot="icon" size="m">${AddIcon()}</sp-icon></sp-button>
+        <sp-button @click=${() => {
+            scope.dispatchEvent(new Event(UPLOAD_IMAGE, { bubbles: true }));
+        }}><sp-icon slot="icon" size="m">${AddIcon()}</sp-icon></sp-button>
         ${[
             './assets/astronaut.jpg',
             './assets/iss.jpg',

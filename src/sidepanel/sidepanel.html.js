@@ -10,10 +10,11 @@ import '@spectrum-web-components/tabs/sp-tabs';
 import '@spectrum-web-components/tabs/sp-tab';
 import '@spectrum-web-components/switch/sp-switch';
 import { Renderers } from 'halftone-web-component';
+import { Logo } from './logo';
 
 export const template = function(scope) { return html`
     <div id="logo-container">
-        <div id="logo"></div>
+        <div id="logo">${Logo}</div>
         <h2>Halftones...<br />in Space!</h2>.
     </div>
     <sp-divider></sp-divider>
@@ -57,14 +58,14 @@ export const template = function(scope) { return html`
     </sp-tabs>
     <br />
     <sp-color-slider 
-            color=${scope.halftoneColor}
+            color=${scope.colorTab === 'halftones' ? scope.halftoneColor : scope.backgroundColor}
             @input=${(event) => {
                 scope.sendEvent(scope.colorTab === 'halftones' ? 'halftoneColor' : 'backgroundColor', event.target.color);
             }}>
     </sp-color-slider>
     <br />
     <sp-color-area 
-            color=${scope.halftoneColor}
+            color=${scope.colorTab === 'halftones' ? scope.halftoneColor : scope.backgroundColor}
             @input=${(event) => {
                 scope.sendEvent(scope.colorTab === 'halftones' ? 'halftoneColor' : 'backgroundColor', event.target.color);
             }}>

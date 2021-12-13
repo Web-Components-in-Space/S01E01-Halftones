@@ -23,6 +23,11 @@ export const style = css`
       height: 50px;
       margin-right: 20px;
     }
+
+    #logo svg {
+      width: 100%;
+      height: 100%;
+    }
   
     sp-color-slider {
       min-height: 20px;

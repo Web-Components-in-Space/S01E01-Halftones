@@ -1,5 +1,17 @@
 # S01E01-Halftones
 
+# Step 6: Finishing Steps
+Step 6 finishes up the application. We add a few final touches to make our application really
+sing.
+
+Step 6 adds:
+
+- Resizing of the halftone-component
+- SVG/JPG/PNG saving
+- Local image uploading
+- Wire up color tab to allow switching between background color and halftone color  
+- An SVG logo to the app that we created with the tool
+
 # Step 5: Listening and responding to change events
 In step 5 we get our application working by finally applying values changed from our 
 various UI pieces to our data model, which updates every piece of our application.
