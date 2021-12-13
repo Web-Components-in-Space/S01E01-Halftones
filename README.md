@@ -1,5 +1,18 @@
 # S01E01-Halftones
 
+
+# Step 3: Filling in the rest of the UI
+In step 3, we're continuing our Spectrum Web Components journey. First we'll
+fill in the "floatingfooter" component with some download buttons.
+Next, we'll go crazy with the side panel and employ several different
+Spectrum Web Components
+
+Step 3 covers:
+
+- Creating our 2 remaining application components
+- Using Spectrum Web Component's "action button", "field-label", "picker", "color-area" and "color-slider" components
+- Finishing our application's UI layout and design
+
 # Step 2: Organizing and our first child component
 In this second step, we're going to do some custom organization of our main app component,
 but also build out our first child component that allows us to select an image to use for our halftone
