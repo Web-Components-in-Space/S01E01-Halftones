@@ -1,5 +1,17 @@
 # S01E01-Halftones
 
+# Step 4: Creating a naive data model
+In step 4, we're going to stop hard-coding all of our attributes/properties and let
+them flow through to our child components using Lit's "Reactive Properties".
+The end result is that we can control all of our settings from the main component.
+
+In step 4 we:
+
+- Create an object in our main component with all of our application properties
+- Replace hard-coded attributes with Reactive Properties
+- Populate our child components with Reactive Properties and use them in their HTML instead of hard-coded values
+- Make Side panel UI reflect data model
+- Give selected image a border based on current selection
 
 # Step 3: Filling in the rest of the UI
 In step 3, we're continuing our Spectrum Web Components journey. First we'll

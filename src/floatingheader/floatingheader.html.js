@@ -12,7 +12,7 @@ export const template = function(scope) {
             './assets/liftoff.jpg',
             './assets/space.jpg'
         ].map(photo => {
-            return html`<button style='background-image: url("${photo}")'></button>`;
+            return html`<button ?selected=${photo === scope.image} style='background-image: url("${photo}")'></button>`;
         })}
     `;
 }

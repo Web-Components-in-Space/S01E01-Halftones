@@ -8,6 +8,27 @@ export class App extends LitElement {
         return [style];
     }
 
+    static get properties() {
+        return {
+            shapeType: { type: String },
+            spread: { type: Number },
+            invert: { type: Boolean },
+            backgroundColor: { type: String },
+            halftoneColor: { type: String },
+            image: { type: String },
+        };
+    }
+
+    constructor() {
+        super();
+        this.image = './assets/astronaut.jpg';
+        this.shapeType = 'hexagons';
+        this.spread = 14;
+        this.invert = false;
+        this.halftoneColor = '#00ff00';
+        this.backgroundColor = '#0000ff';
+    }
+
     render() {
         return template(this);
     }

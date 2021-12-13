@@ -7,6 +7,12 @@ export class FloatingHeader extends LitElement {
         return [style];
     }
 
+    static get properties() {
+        return {
+            image: { type: String },
+        };
+    }
+
     render() {
         return template(this);
     }

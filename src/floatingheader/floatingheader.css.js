@@ -15,4 +15,14 @@ export const style = css`
     border: none;
     margin-right: 5px;
   }
+
+  button {
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+  }
+
+  button[selected] {
+    border-color: var(--spectrum-global-color-static-blue);
+  }
 `;

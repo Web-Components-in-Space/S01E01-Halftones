@@ -5,7 +5,7 @@ import { VectorDrawIcon, ImageIcon } from '@spectrum-web-components/icons-workfl
 
 export const template = function(scope) {
     return html`
-        <sp-action-button}>
+        <sp-action-button>
             <sp-icon slot="icon" size="m">${VectorDrawIcon()}</sp-icon>
             Save as SVG
         </sp-action-button>

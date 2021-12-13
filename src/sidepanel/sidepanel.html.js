@@ -21,7 +21,7 @@ export const template = function(scope) { return html`
     <br />
     <br />
     <sp-field-label for="picker-icons">Choose a shape...</sp-field-label>
-    <sp-picker>
+    <sp-picker value=${scope.shapeType}>
         ${Renderers.RenderShapeTypes.map(shape => { 
             return html`<sp-menu-item value=${shape}>${shape.charAt(0).toUpperCase() + shape.substring(1)}</sp-menu-item>` })}
     </sp-picker>
@@ -30,13 +30,13 @@ export const template = function(scope) { return html`
     <br />
     
     <sp-field-label>Spread</sp-field-label>
-    <sp-slider></sp-slider>
+    <sp-slider value=${scope.spread}></sp-slider>
 
     <br />
     <br />
 
     <sp-field-label>Invert Pattern</sp-field-label>
-    <sp-switch></sp-switch>
+    <sp-switch ?checked=${scope.invert}></sp-switch>
 
     <br />
     <br />
@@ -47,10 +47,10 @@ export const template = function(scope) { return html`
         <sp-tab label="Background" value="background"></sp-tab>
     </sp-tabs>
     <br />
-    <sp-color-slider>
+    <sp-color-slider color=${scope.halftoneColor}>
     </sp-color-slider>
     <br />
-    <sp-color-area>
+    <sp-color-area color=${scope.halftoneColor}>
     </sp-color-area>
 
 `};

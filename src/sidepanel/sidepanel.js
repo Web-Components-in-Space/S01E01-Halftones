@@ -7,6 +7,17 @@ export class SidePanel extends LitElement {
         return [style];
     }
 
+    static get properties() {
+        return {
+            shapeType: { type: String },
+            spread: { type: Number },
+            invert: { type: Boolean },
+            backgroundColor: { type: String },
+            halftoneColor: { type: String },
+            colorTab: { type: String }
+        };
+    }
+
     render() {
         return template(this);
     }
