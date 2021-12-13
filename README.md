@@ -1,5 +1,14 @@
 # S01E01-Halftones
 
+# Step 5: Listening and responding to change events
+In step 5 we get our application working by finally applying values changed from our 
+various UI pieces to our data model, which updates every piece of our application.
+
+Step 5 covers:
+
+- Using Lit-HTML syntax to add event listeners right on our tags
+- Decide how to listen to these changes (is it @change or JS coded event listeners?)
+
 # Step 4: Creating a naive data model
 In step 4, we're going to stop hard-coding all of our attributes/properties and let
 them flow through to our child components using Lit's "Reactive Properties".

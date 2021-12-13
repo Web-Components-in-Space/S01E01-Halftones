@@ -18,6 +18,12 @@ export class SidePanel extends LitElement {
         };
     }
 
+    sendEvent(property, value) {
+        this.dispatchEvent(
+            new CustomEvent('settingschange', { detail: { property, value }, bubbles: true })
+        );
+    }
+
     render() {
         return template(this);
     }

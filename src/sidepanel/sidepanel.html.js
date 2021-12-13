@@ -21,7 +21,9 @@ export const template = function(scope) { return html`
     <br />
     <br />
     <sp-field-label for="picker-icons">Choose a shape...</sp-field-label>
-    <sp-picker value=${scope.shapeType}>
+    <sp-picker value="${scope.shapeType}" @change=${(event) => {
+        scope.sendEvent('shapeType', event.target.value);
+    }}>
         ${Renderers.RenderShapeTypes.map(shape => { 
             return html`<sp-menu-item value=${shape}>${shape.charAt(0).toUpperCase() + shape.substring(1)}</sp-menu-item>` })}
     </sp-picker>
@@ -30,27 +32,42 @@ export const template = function(scope) { return html`
     <br />
     
     <sp-field-label>Spread</sp-field-label>
-    <sp-slider value=${scope.spread}></sp-slider>
+    <sp-slider @input=${(event) => {
+        scope.sendEvent('spread', event.target.value);
+    }}></sp-slider>
 
     <br />
     <br />
 
     <sp-field-label>Invert Pattern</sp-field-label>
-    <sp-switch ?checked=${scope.invert}></sp-switch>
+    <sp-switch @change=${(event) => {
+        scope.sendEvent('invert', event.target.checked);
+    }}></sp-switch>
 
     <br />
     <br />
 
     <sp-field-label>Color</sp-field-label>
-    <sp-tabs selected="halftones">
+    <sp-tabs selected="halftones" 
+             @change=${(event) => {
+                scope.colorTab = event.target.selected;
+             }}>
         <sp-tab label="Halftones" value="halftones"></sp-tab>
         <sp-tab label="Background" value="background"></sp-tab>
     </sp-tabs>
     <br />
-    <sp-color-slider color=${scope.halftoneColor}>
+    <sp-color-slider 
+            color=${scope.halftoneColor}
+            @input=${(event) => {
+                scope.sendEvent(scope.colorTab === 'halftones' ? 'halftoneColor' : 'backgroundColor', event.target.color);
+            }}>
     </sp-color-slider>
     <br />
-    <sp-color-area color=${scope.halftoneColor}>
+    <sp-color-area 
+            color=${scope.halftoneColor}
+            @input=${(event) => {
+                scope.sendEvent(scope.colorTab === 'halftones' ? 'halftoneColor' : 'backgroundColor', event.target.color);
+            }}>
     </sp-color-area>
 
 `};

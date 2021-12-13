@@ -1,7 +1,6 @@
-import { LitElement } from 'lit';
-import { style } from './app.css.js';
-import { template } from './app.html.js';
-import 'halftone-web-component';
+import {LitElement} from 'lit';
+import {template} from './app.html';
+import {style} from './app.css';
 
 export class App extends LitElement {
     static get styles() {
@@ -27,6 +26,18 @@ export class App extends LitElement {
         this.invert = false;
         this.halftoneColor = '#00ff00';
         this.backgroundColor = '#0000ff';
+    }
+
+    firstUpdated() {
+        this.shadowRoot.addEventListener('settingschange', (event) => {
+            if (event.detail && event.detail.property !== undefined) {
+                this[event.detail.property] = event.detail.value;
+            }
+        });
+
+        this.shadowRoot.addEventListener(SAVE_SVG, () => {});
+        this.shadowRoot.addEventListener(SAVE_PNG, () => {});
+        this.shadowRoot.addEventListener(SAVE_JPG, () => {});
     }
 
     render() {
