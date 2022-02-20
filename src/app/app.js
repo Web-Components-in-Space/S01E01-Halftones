@@ -10,7 +10,7 @@ export class App extends LitElement {
                   width: 100vw;
                 }
                 
-                sp-theme {
+                div {
                   width: 100%;
                   height: 100%;
                   display: flex;
@@ -26,17 +26,12 @@ export class App extends LitElement {
                   display: inline-block;
                   width: 100%;
                   height: 100%;
-                }
-                
-                #background {
-                  width: 100%;
-                  height: 100%;
                 }`
         ];
     }
 
     render() {
-        return html`<sp-theme scale="medium" color="light">
+        return html`<div>
             <ht-sidepanel style="background-color: blue; width: 250px; height: 100%;"></ht-sidepanel>
             <div id="main-container" style="background-color: red">
                 <ht-floatingheader style="background-color: yellow; width: 100%; height: 100px;"></ht-floatingheader>
@@ -45,11 +40,10 @@ export class App extends LitElement {
                       distance="14"
                       shapecolor="white"
                       shapetype="circles">
-                    <div id="background" style="background-color: black"></div>
                 </halftone-svg>
                 <ht-floatingfooter style="background-color: purple; width: 100%; height: 100px;"></ht-floatingfooter>
             </div>
-        </sp-theme>`;
+        </div>`;
     }
 }
 
