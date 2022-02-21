@@ -1,4 +1,4 @@
-import {css} from 'lit';
+import { css } from 'lit';
 
 export const style = css`
   :host {
@@ -9,10 +9,9 @@ export const style = css`
   }
   
   button, sp-button {
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    border: none;
-    margin-right: 5px;
-  }
-`;
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      border: none;
+      margin-right: 5px;
+}`;

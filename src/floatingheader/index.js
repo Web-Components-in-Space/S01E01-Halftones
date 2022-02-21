@@ -1,1 +1,1 @@
-import './floatingheader';
+export * from './floatingheader';
