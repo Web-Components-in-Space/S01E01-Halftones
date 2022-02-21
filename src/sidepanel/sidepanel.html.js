@@ -21,7 +21,7 @@ export const template = function(scope) { return html`
     <br />
     <br />
     <sp-field-label for="picker-icons">Choose a shape...</sp-field-label>
-    <sp-picker>
+    <sp-picker value="circles">
         ${Renderers.RenderShapeTypes.map(shape => { 
             return html`<sp-menu-item value=${shape}>${shape.charAt(0).toUpperCase() + shape.substring(1)}</sp-menu-item>` })}
     </sp-picker>

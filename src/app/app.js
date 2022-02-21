@@ -1,6 +1,6 @@
 import { LitElement } from 'lit';
-import { style } from './app.css.js';
-import { template } from './app.html.js';
+import { style } from './app.css';
+import { template } from './app.html';
 import 'halftone-web-component';
 
 export class App extends LitElement {

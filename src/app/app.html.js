@@ -15,9 +15,8 @@ export const template = function(scope) { return html`
             <halftone-svg
                   src="./assets/astronaut.jpg"
                   distance="14"
-                  shapecolor="white"
+                  shapecolor="red"
                   shapetype="circles">
-                <div id="background" style="background-color: black"></div>
             </halftone-svg>
             <ht-floatingfooter></ht-floatingfooter>
         </div>
