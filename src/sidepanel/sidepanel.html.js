@@ -59,14 +59,14 @@ export const template = function(scope) { return html`
     <sp-color-slider 
             color=${scope.halftoneColor}
             @input=${(event) => {
-                scope.sendEvent(scope.colorTab === 'halftones' ? 'halftoneColor' : 'backgroundColor', event.target.color);
+                scope.sendEvent('halftoneColor', event.target.color);
             }}>
     </sp-color-slider>
     <br />
     <sp-color-area 
             color=${scope.halftoneColor}
             @input=${(event) => {
-                scope.sendEvent(scope.colorTab === 'halftones' ? 'halftoneColor' : 'backgroundColor', event.target.color);
+                scope.sendEvent('halftoneColor', event.target.color);
             }}>
     </sp-color-area>
 

@@ -25,7 +25,6 @@ export const template = function(scope) { return html`
             distance=${scope.spread}
             shapecolor=${scope.halftoneColor}
             shapetype=${scope.shapeType}>
-            <div id="background" style="background-color: ${scope.backgroundColor}"></div>
         </halftone-svg>
         <ht-floatingfooter></ht-floatingfooter>
     </div>
