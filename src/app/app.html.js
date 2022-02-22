@@ -18,7 +18,7 @@ export const template = function(scope) { return html`
         spread=${scope.spread}>
     </ht-sidepanel>
     <div id="main-container">
-        <ht-floatingheader image=${scope.image} @uploadImage=${() => {
+        <ht-floatingheader image=${scope.image} @upload=${() => {
             scope.shadowRoot.getElementById('file-input').click();
         }}></ht-floatingheader>
         <halftone-svg 

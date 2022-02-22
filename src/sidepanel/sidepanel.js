@@ -18,6 +18,11 @@ export class SidePanel extends LitElement {
         };
     }
 
+    constructor() {
+        super();
+        this.colorTab = 'halftones';
+    }
+
     sendEvent(property, value) {
         this.dispatchEvent(
             new CustomEvent('settingschange', { detail: { property, value }, bubbles: true })
